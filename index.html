@@ -137,6 +137,50 @@
         }
 
         /* ------------------------------
+           CONTACTOS
+        ------------------------------ */
+        .contactos {
+            margin: 60px auto;
+            padding: 40px 20px;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .contactos h2 {
+            font-size: 32px;
+            color: var(--grad-start);
+            margin-bottom: 10px;
+        }
+
+        .contactos p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: block;
+            padding: 14px 18px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        /* ------------------------------
            RESPONSIVIDADE TOTAL
         ------------------------------ */
 
@@ -354,6 +398,28 @@
 
         </div>
     </div>
+
+    <!-- CONTACTOS -->
+    <section class="contactos">
+        <h2>Contactos</h2>
+        <p>Fico ao dispor para qualquer esclarecimento ou colaboração.</p>
+
+        <div class="contact-grid">
+
+            <a href="mailto:info@solucoeseficazes.pt" class="contact-item">
+                📧 Email: info@solucoeseficazes.pt
+            </a>
+
+            <a href="tel:+351961509386" class="contact-item">
+                📞 Telemóvel: 961 509 386
+            </a>
+
+            <a href="https://wa.me/351961509386" target="_blank" class="contact-item">
+                💬 WhatsApp
+            </a>
+
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
