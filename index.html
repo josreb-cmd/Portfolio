@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio de Ferramentas Financeiras – Soluções Eficazes</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <style>
@@ -108,19 +107,24 @@
             box-shadow: 0 6px 16px rgba(0,0,0,0.15);
         }
 
-        /* Contactos */
-        .contactos {
-            margin-top: 60px;
-            padding: 26px;
-            background: #ffffff;
-            border-radius: 14px;
-            border: 2px solid #1a2a6c;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        /* Fade-in suave */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
         }
 
-        .contactos p {
-            font-size: 16px;
-            margin: 10px 0;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Linha horizontal suave */
+        .hr-suave {
+            width: 100%;
+            max-width: 900px;
+            margin: 60px auto 30px auto;
+            border: none;
+            border-top: 1px solid rgba(26, 42, 108, 0.25);
         }
 
         footer {
@@ -129,6 +133,32 @@
             padding: 20px;
             color: #777;
             font-size: 14px;
+        }
+
+        /* Botão Voltar ao Topo */
+        #btnTopo {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            background: linear-gradient(135deg, #1a2a6c, #3a7bd5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: 0.25s ease;
+            z-index: 999;
+        }
+
+        #btnTopo:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
         }
     </style>
 </head>
@@ -139,118 +169,143 @@
 
 <div class="container">
     <div class="grid">
-          <!-- CARD 1 — Simulador de Crédito -->
+
+        <!-- CARD 1 — Crédito -->
         <div class="card">
-            <!-- Ícone Crédito -->
             <svg class="icon-large" viewBox="0 0 64 64">
-                <defs>
-                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#1a2a6c"/>
-                        <stop offset="100%" stop-color="#3a7bd5"/>
-                    </linearGradient>
-                </defs>
+                <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1a2a6c"/><stop offset="100%" stop-color="#3a7bd5"/>
+                </linearGradient></defs>
                 <path fill="url(#grad1)" d="M12 8h40v10H12V8zm0 14h40v34H12V22zm8 8v6h6v-6h-6zm0 12v6h6v-6h-6zm14-12v6h6v-6h-6zm0 12v6h6v-6h-6z"/>
             </svg>
-
             <h2>Simulador de Crédito</h2>
             <p>Calcule prestações, juros totais e planos de pagamento de forma rápida e intuitiva.</p>
             <a class="btn-aceder" href="https://josreb-cmd.github.io/SimuladorCredito/" target="_blank">Aceder</a>
         </div>
 
-
         <!-- CARD 2 — Financiamento Máximo -->
         <div class="card">
-            <!-- Ícone Financiamento Máximo -->
             <svg class="icon-large" viewBox="0 0 64 64">
-                <defs>
-                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#1a2a6c"/>
-                        <stop offset="100%" stop-color="#3a7bd5"/>
-                    </linearGradient>
-                </defs>
+                <defs><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1a2a6c"/><stop offset="100%" stop-color="#3a7bd5"/>
+                </linearGradient></defs>
                 <path fill="url(#grad2)" d="M32 6l14 14h-9v20h-10V20h-9L32 6zm-20 40h40v8H12v-8z"/>
             </svg>
-
             <h2>Simulador Financiamento Máximo</h2>
             <p>Calcule o valor máximo financiável com base no rendimento e na prestação desejada.</p>
             <a class="btn-aceder" href="https://josreb-cmd.github.io/SimuladorFinanciamento/" target="_blank">Aceder</a>
         </div>
 
-
         <!-- CARD 3 — Leasing -->
         <div class="card">
-            <!-- Ícone Leasing -->
             <svg class="icon-large" viewBox="0 0 64 64">
-                <defs>
-                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#1a2a6c"/>
-                        <stop offset="100%" stop-color="#3a7bd5"/>
-                    </linearGradient>
-                </defs>
+                <defs><linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1a2a6c"/><stop offset="100%" stop-color="#3a7bd5"/>
+                </linearGradient></defs>
                 <path fill="url(#grad3)" d="M10 38l6-14h32l6 14H10zm8 4a6 6 0 110 12 6 6 0 010-12zm28 0a6 6 0 110 12 6 6 0 010-12z"/>
             </svg>
-
             <h2>Simulador de Leasing</h2>
             <p>Simule rendas, valor residual, encargos totais e condições de leasing automóvel.</p>
             <a class="btn-aceder" href="https://josreb-cmd.github.io/Simulador-Leasing/" target="_blank">Aceder</a>
         </div>
 
-
         <!-- CARD 4 — Juros Compostos -->
         <div class="card">
-            <!-- Ícone Juros Compostos -->
             <svg class="icon-large" viewBox="0 0 64 64">
-                <defs>
-                    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#1a2a6c"/>
-                        <stop offset="100%" stop-color="#3a7bd5"/>
-                    </linearGradient>
-                </defs>
+                <defs><linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1a2a6c"/><stop offset="100%" stop-color="#3a7bd5"/>
+                </linearGradient></defs>
                 <path fill="url(#grad4)" d="M10 50c10-20 20-30 30-20 6 4 10 12 14 20H10z"/>
                 <circle cx="20" cy="28" r="4" fill="url(#grad4)"/>
                 <circle cx="34" cy="22" r="4" fill="url(#grad4)"/>
                 <circle cx="48" cy="30" r="4" fill="url(#grad4)"/>
             </svg>
-
             <h2>Calculadora de Juros Compostos</h2>
             <p>Simulação avançada com capitalização composta, gráficos e resumo premium.</p>
             <a class="btn-aceder" href="https://josreb-cmd.github.io/SimuladorJuroComposto/" target="_blank">Aceder</a>
         </div>
 
-
         <!-- CARD 5 — Juros Simples -->
         <div class="card">
-            <!-- Ícone Juros Simples -->
             <svg class="icon-large" viewBox="0 0 64 64">
-                <defs>
-                    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#1a2a6c"/>
-                        <stop offset="100%" stop-color="#3a7bd5"/>
-                    </linearGradient>
-                </defs>
+                <defs><linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1a2a6c"/><stop offset="100%" stop-color="#3a7bd5"/>
+                </linearGradient></defs>
                 <path fill="url(#grad5)" d="M20 12h24v8H20v-8zm0 14h24v26H20V26zm6 6v6h12v-6H26z"/>
             </svg>
-
             <h2>Calculadora de Juros Simples</h2>
             <p>Calcule juros simples, montante final e rendimento total de forma direta.</p>
             <a class="btn-aceder" href="https://josreb-cmd.github.io/SimuladorJuroSimples/" target="_blank">Aceder</a>
         </div>
-            </div> <!-- fecha .grid -->
+
+    </div> <!-- fecha grid -->
 
     <!-- CONTACTOS -->
-    <div class="contactos">
-        <h2 style="text-align:center; color:#1a2a6c; margin-bottom:18px;">Contactos</h2>
+    <div class="contactos fade-in"
+         style="border: 2px solid #1a2a6c; 
+                border-radius: 14px; 
+                padding: 30px 26px; 
+                text-align: center; 
+                max-width: 600px; 
+                margin: 60px auto 0 auto;
+                box-shadow: 0 4px 14px rgba(0,0,0,0.06);">
 
-        <p>📧 <strong>Email:</strong> info@solucoeseficazes.pt</p>
-        <p>📞 <strong>Telemóvel:</strong> 961 509 386</p>
-        <p>💬 <strong>WhatsApp:</strong> 961 509 386</p>
+        <h2 style="color:#1a2a6c; margin-bottom:16px;">Contactos</h2>
+
+        <p style="font-size:16px; margin-bottom:26px;">
+            Fico ao dispor para qualquer esclarecimento ou colaboração.
+        </p>
+
+        <p style="font-size:16px; margin:10px 0;">
+            📧 <strong>Email:</strong> 
+            <a href="mailto:info@solucoeseficazes.pt" style="color:#1a2a6c; text-decoration:none;">
+                info@solucoeseficazes.pt
+            </a>
+        </p>
+
+        <p style="font-size:16px; margin:10px 0;">
+            📞 <strong>Telemóvel:</strong> 
+            <a href="tel:+351961509386" style="color:#1a2a6c; text-decoration:none;">
+                961 509 386
+            </a>
+        </p>
+
+        <p style="font-size:16px; margin:10px 0;">
+            💬 <strong>WhatsApp:</strong> 
+            <a href="https://wa.me/351961509386" target="_blank" style="color:#1a2a6c; text-decoration:none;">
+                961 509 386
+            </a>
+        </p>
     </div>
 
-</div> <!-- fecha .container -->
+    <hr class="hr-suave">
+
+</div> <!-- fecha container -->
 
 <footer>
     © 2026 José Rebelo — Soluções Eficazes
 </footer>
+
+<button id="btnTopo" title="Voltar ao topo">↑</button>
+
+<script>
+    const btnTopo = document.getElementById("btnTopo");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            btnTopo.style.display = "flex";
+        } else {
+            btnTopo.style.display = "none";
+        }
+    });
+
+    btnTopo.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
 
 </body>
 </html>
