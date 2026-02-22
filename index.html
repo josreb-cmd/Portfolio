@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Aplicações Web Financeiras</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <style>
+        /* ------------------------------
+           PALETA E GRADIENTES
+        ------------------------------ */
+        :root {
+            --grad-start: #002B55;
+            --grad-mid: #004C99;
+            --grad-end: #66A3FF;
+
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --button-bg: #005599;
+            --button-hover: #003f73;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --card-bg: #112233;
+                --text-color: #E6ECF2;
+                --button-bg: #66A3FF;
+                --button-hover: #4d8be0;
+            }
+
+            body {
+                background: #0A1A2A;
+            }
+        }
+
+        /* ------------------------------
+           BASE
+        ------------------------------ */
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f5f7fa;
+            color: var(--text-color);
+        }
+
+        /* ------------------------------
+           HERO
+        ------------------------------ */
+        header {
+            background: linear-gradient(135deg, #003366, #005599);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* ------------------------------
+           GRID
+        ------------------------------ */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* ------------------------------
+           CARTÕES
+        ------------------------------ */
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+        }
+
+        .card h3 {
+            margin-top: 10px;
+            color: var(--grad-start);
+        }
+
+        .card p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 16px;
+            background: var(--button-bg);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .card a:hover {
+            background: var(--button-hover);
+        }
+
+        /* ------------------------------
+           ÍCONES
+        ------------------------------ */
+        .icon-container {
+            width: 64px;
+            height: 64px;
+        }
+
+        .icon-svg {
+            width: 64px;
+            height: 64px;
+        }
+
+        /* ------------------------------
+           FOOTER
+        ------------------------------ */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+            background: #e9eef3;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <header>
+        <h1>Portfólio de Aplicações Web Financeiras</h1>
+        <p>Ferramentas digitais desenvolvidas para cálculos financeiros, produtividade e apoio à decisão.</p>
+    </header>
+
+    <!-- APPS -->
+    <div class="container">
+        <div class="grid">
+
+            <!-- JUROS SIMPLES -->
+            <div class="card">
+                <div class="icon-container">
+                    <svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#002B55"/>
+                                <stop offset="50%" stop-color="#004C99"/>
+                                <stop offset="100%" stop-color="#66A3FF"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="15" cy="15" r="6"/>
+                        <circle cx="33" cy="33" r="6"/>
+                        <line x1="33" y1="15" x2="15" y2="33"/>
+                    </svg>
+                </div>
+                <h3>Simulador de Juros Simples</h3>
+                <p>Cálculo rápido e direto de juros simples, ideal para análises financeiras básicas.</p>
+                <a href="https://josreb-cmd.github.io/SimuladorJuroSimples/" target="_blank">Aceder</a>
+            </div>
+
+            <!-- FINANCIAMENTO MÁXIMO -->
+            <div class="card">
+                <div class="icon-container">
+                    <svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#002B55"/>
+                                <stop offset="50%" stop-color="#004C99"/>
+                                <stop offset="100%" stop-color="#66A3FF"/>
+                            </linearGradient>
+                        </defs>
+                        <polyline points="12,30 24,18 36,30"/>
+                        <text x="24" y="40" font-size="14" text-anchor="middle" fill="url(#grad1)">€</text>
+                    </svg>
+                </div>
+                <h3>Simulador Financiamento Máximo</h3>
+                <p>Ferramenta prática para calcular rapidamente o montante máximo financiável com base na prestação desejada.</p>
+                <a href="https://josreb-cmd.github.io/SimuladorFinanciamento/" target="_blank">Aceder</a>
+            </div>
+
+            <!-- LEASING -->
+            <div class="card">
+                <div class="icon-container">
+                    <svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#002B55"/>
+                                <stop offset="50%" stop-color="#004C99"/>
+                                <stop offset="100%" stop-color="#66A3FF"/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="10" y="20" width="28" height="10" rx="4"/>
+                        <circle cx="16" cy="34" r="4"/>
+                        <circle cx="32" cy="34" r="4"/>
+                    </svg>
+                </div>
+                <h3>Simulador de Leasing</h3>
+                <p>Simulador completo para operações de leasing, incluindo rendas, valor residual e custo total.</p>
+                <a href="https://josreb-cmd.github.io/Simulador-Leasing/" target="_blank">Aceder</a>
+            </div>
+
+            <!-- CRÉDITO -->
+            <div class="card">
+                <div class="icon-container">
+                    <svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#002B55"/>
+                                <stop offset="50%" stop-color="#004C99"/>
+                                <stop offset="100%" stop-color="#66A3FF"/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="12" y="10" width="24" height="30" rx="4"/>
+                        <line x1="18" y1="20" x2="30" y2="20"/>
+                        <line x1="18" y1="26" x2="30" y2="26"/>
+                        <text x="24" y="38" font-size="14" text-anchor="middle" fill="url(#grad1)">€</text>
+                    </svg>
+                </div>
+                <h3>Simulador de Crédito</h3>
+                <p>Ferramenta prática para simular créditos, prestações, taxas e encargos totais.</p>
+                <a href="https://josreb-cmd.github.io/SimuladorCredito/" target="_blank">Aceder</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 — Portfólio de Aplicações Web Financeiras
+    </footer>
+
+</body>
+</html>
