@@ -137,6 +137,113 @@
         }
 
         /* ------------------------------
+           RESPONSIVIDADE TOTAL
+        ------------------------------ */
+
+        /* TELEFONE PEQUENO (≤ 480px) */
+        @media (max-width: 480px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .icon-container {
+                width: 48px;
+                height: 48px;
+            }
+
+            .icon-svg {
+                width: 48px;
+                height: 48px;
+            }
+
+            .card h3 {
+                font-size: 18px;
+            }
+
+            .card p {
+                font-size: 14px;
+            }
+        }
+
+        /* TELEFONE GRANDE / TABLET (481px – 768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            .card {
+                padding: 24px;
+            }
+
+            .icon-container {
+                width: 56px;
+                height: 56px;
+            }
+
+            .icon-svg {
+                width: 56px;
+                height: 56px;
+            }
+        }
+
+        /* PORTÁTIL (769px – 1200px) */
+        @media (min-width: 769px) and (max-width: 1200px) {
+
+            header h1 {
+                font-size: 40px;
+            }
+
+            .card {
+                padding: 26px;
+            }
+
+            .icon-container {
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        /* MONITOR GRANDE (> 1200px) */
+        @media (min-width: 1201px) {
+
+            .container {
+                max-width: 1400px;
+            }
+
+            .card {
+                padding: 32px;
+            }
+
+            .icon-container {
+                width: 72px;
+                height: 72px;
+            }
+
+            .icon-svg {
+                width: 72px;
+                height: 72px;
+            }
+
+            .card h3 {
+                font-size: 22px;
+            }
+
+            .card p {
+                font-size: 16px;
+            }
+        }
+
+        /* ------------------------------
            FOOTER
         ------------------------------ */
         footer {
