@@ -3,428 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Aplicações Web Financeiras</title>
+    <title>Portfolio - José Rebelo</title>
 
-    <!-- FAVICON -->
+    <!-- Favicon atualizado -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        /* ------------------------------
-           PALETA E GRADIENTES
-        ------------------------------ */
-        :root {
-            --grad-start: #002B55;
-            --grad-mid: #004C99;
-            --grad-end: #66A3FF;
-
-            --card-bg: #ffffff;
-            --text-color: #333;
-            --button-bg: #005599;
-            --button-hover: #003f73;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --card-bg: #112233;
-                --text-color: #E6ECF2;
-                --button-bg: #66A3FF;
-                --button-hover: #4d8be0;
-            }
-
-            body {
-                background: #0A1A2A;
-            }
-        }
-
-        /* ------------------------------
-           BASE
-        ------------------------------ */
         body {
-            margin: 0;
-            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #f5f7fa;
-            color: var(--text-color);
+            background-color: #f8f9fa;
         }
-
-        /* ------------------------------
-           HERO
-        ------------------------------ */
         header {
-            background: linear-gradient(135deg, #003366, #005599);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
+            padding: 40px 0;
         }
-
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
-
-        /* ------------------------------
-           GRID
-        ------------------------------ */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        /* ------------------------------
-           CARTÕES
-        ------------------------------ */
         .card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 28px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            transition: transform .25s ease, box-shadow .25s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-        }
-
-        .card h3 {
-            margin-top: 10px;
-            color: var(--grad-start);
-        }
-
-        .card p {
-            font-size: 15px;
-            line-height: 1.5;
-        }
-
-        .card a {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 10px 16px;
-            background: var(--button-bg);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-        }
-
-        .card a:hover {
-            background: var(--button-hover);
-        }
-
-        /* ------------------------------
-           ÍCONES
-        ------------------------------ */
-        .icon-container {
-            width: 64px;
-            height: 64px;
-        }
-
-        .icon-svg {
-            width: 64px;
-            height: 64px;
-        }
-
-        /* ------------------------------
-           CONTACTOS
-        ------------------------------ */
-        .contactos {
-            margin: 60px auto;
-            padding: 40px 20px;
-            max-width: 900px;
-            text-align: center;
-        }
-
-        .contactos h2 {
-            font-size: 32px;
-            color: var(--grad-start);
-            margin-bottom: 10px;
-        }
-
-        .contactos p {
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
-
-        .contact-item {
-            display: block;
-            padding: 14px 18px;
-            background: var(--card-bg);
             border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 600;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: transform .2s ease, box-shadow .2s ease;
         }
-
-        .contact-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-        }
-
-        /* ------------------------------
-           RESPONSIVIDADE TOTAL
-        ------------------------------ */
-
-        /* TELEFONE PEQUENO (≤ 480px) */
-        @media (max-width: 480px) {
-
-            header h1 {
-                font-size: 28px;
-            }
-
-            header p {
-                font-size: 15px;
-            }
-
-            .card {
-                padding: 20px;
-            }
-
-            .icon-container {
-                width: 48px;
-                height: 48px;
-            }
-
-            .icon-svg {
-                width: 48px;
-                height: 48px;
-            }
-
-            .card h3 {
-                font-size: 18px;
-            }
-
-            .card p {
-                font-size: 14px;
-            }
-        }
-
-        /* TELEFONE GRANDE / TABLET (481px – 768px) */
-        @media (min-width: 481px) and (max-width: 768px) {
-
-            header h1 {
-                font-size: 34px;
-            }
-
-            .card {
-                padding: 24px;
-            }
-
-            .icon-container {
-                width: 56px;
-                height: 56px;
-            }
-
-            .icon-svg {
-                width: 56px;
-                height: 56px;
-            }
-        }
-
-        /* PORTÁTIL (769px – 1200px) */
-        @media (min-width: 769px) and (max-width: 1200px) {
-
-            header h1 {
-                font-size: 40px;
-            }
-
-            .card {
-                padding: 26px;
-            }
-
-            .icon-container {
-                width: 64px;
-                height: 64px;
-            }
-        }
-
-        /* MONITOR GRANDE (> 1200px) */
-        @media (min-width: 1201px) {
-
-            .container {
-                max-width: 1400px;
-            }
-
-            .card {
-                padding: 32px;
-            }
-
-            .icon-container {
-                width: 72px;
-                height: 72px;
-            }
-
-            .icon-svg {
-                width: 72px;
-                height: 72px;
-            }
-
-            .card h3 {
-                font-size: 22px;
-            }
-
-            .card p {
-                font-size: 16px;
-            }
-        }
-
-        /* ------------------------------
-           FOOTER
-        ------------------------------ */
         footer {
+            padding: 30px 0;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 40px;
-            background: #e9eef3;
-            color: #555;
+            color: #6c757d;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- HERO -->
-    <header>
-        <h1>Portfólio de Aplicações Web Financeiras</h1>
-        <p>Ferramentas digitais desenvolvidas para cálculos financeiros, produtividade e apoio à decisão.</p>
-    </header>
+<header class="text-center">
+    <h1 class="fw-bold">Portfolio</h1>
+    <p class="text-muted">Ferramentas e Simuladores Financeiros</p>
+</header>
 
-    <!-- APPS -->
-    <div class="container">
-        <div class="grid">
+<div class="container">
+    <div class="row">
 
-            <!-- JUROS SIMPLES -->
-            <div class="card">
-                <div class="icon-container">
-                    <svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#002B55"/>
-                                <stop offset="50%" stop-color="#004C99"/>
-                                <stop offset="100%" stop-color="#66A3FF"/>
-                            </linearGradient>
-                        </defs>
-                        <circle cx="15" cy="15" r="6"/>
-                        <circle cx="33" cy="33" r="6"/>
-                        <line x1="33" y1="15" x2="15" y2="33"/>
-                    </svg>
+        <!-- ⭐ 1. Simulador de Crédito -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Simulador de Crédito</h5>
+                    <p class="card-text text-muted">Calcule prestações, juros totais e planos de pagamento.</p>
+                    <div class="mt-auto">
+                        <a href="https://josreb-cmd.github.io/SimuladorCredito/" 
+                           target="_blank" 
+                           class="btn btn-primary w-100">Aceder</a>
+                    </div>
                 </div>
-                <h3>Simulador de Juros Simples</h3>
-                <p>Cálculo rápido e direto de juros simples, ideal para análises financeiras básicas.</p>
-                <a href="https://josreb-cmd.github.io/SimuladorJuroSimples/" target="_blank">Aceder</a>
             </div>
-
-            <!-- FINANCIAMENTO MÁXIMO -->
-            <div class="card">
-                <div class="icon-container">
-                    <svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#002B55"/>
-                                <stop offset="50%" stop-color="#004C99"/>
-                                <stop offset="100%" stop-color="#66A3FF"/>
-                            </linearGradient>
-                        </defs>
-                        <polyline points="12,30 24,18 36,30"/>
-                        <text x="24" y="40" font-size="14" text-anchor="middle" fill="url(#grad1)">€</text>
-                    </svg>
-                </div>
-                <h3>Simulador Financiamento Máximo</h3>
-                <p>Ferramenta prática para calcular rapidamente o montante máximo financiável com base na prestação desejada.</p>
-                <a href="https://josreb-cmd.github.io/SimuladorFinanciamento/" target="_blank">Aceder</a>
-            </div>
-
-            <!-- LEASING -->
-            <div class="card">
-                <div class="icon-container">
-                    <svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#002B55"/>
-                                <stop offset="50%" stop-color="#004C99"/>
-                                <stop offset="100%" stop-color="#66A3FF"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="10" y="20" width="28" height="10" rx="4"/>
-                        <circle cx="16" cy="34" r="4"/>
-                        <circle cx="32" cy="34" r="4"/>
-                    </svg>
-                </div>
-                <h3>Simulador de Leasing</h3>
-                <p>Simulador completo para operações de leasing, incluindo rendas, valor residual e custo total.</p>
-                <a href="https://josreb-cmd.github.io/Simulador-Leasing/" target="_blank">Aceder</a>
-            </div>
-
-            <!-- CRÉDITO -->
-            <div class="card">
-                <div class="icon-container">
-                    <svg class="icon-svg" viewBox="0 0 48 48" fill="none" stroke="url(#grad1)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="#002B55"/>
-                                <stop offset="50%" stop-color="#004C99"/>
-                                <stop offset="100%" stop-color="#66A3FF"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="12" y="10" width="24" height="30" rx="4"/>
-                        <line x1="18" y1="20" x2="30" y2="20"/>
-                        <line x1="18" y1="26" x2="30" y2="26"/>
-                        <text x="24" y="38" font-size="14" text-anchor="middle" fill="url(#grad1)">€</text>
-                    </svg>
-                </div>
-                <h3>Simulador de Crédito</h3>
-                <p>Ferramenta prática para simular créditos, prestações, taxas e encargos totais.</p>
-                <a href="https://josreb-cmd.github.io/SimuladorCredito/" target="_blank">Aceder</a>
-            </div>
-
         </div>
+
+        <!-- ⭐ 2. Simulador Financiamento Máximo -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Simulador Financiamento Máximo</h5>
+                    <p class="card-text text-muted">Calcule o valor máximo financiável com base no rendimento.</p>
+                    <div class="mt-auto">
+                        <a href="https://josreb-cmd.github.io/SimuladorFinanciamentoMaximo/" 
+                           target="_blank" 
+                           class="btn btn-primary w-100">Aceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ⭐ 3. Simulador de Leasing -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Simulador de Leasing</h5>
+                    <p class="card-text text-muted">Simule prestações, rendas e valores residuais.</p>
+                    <div class="mt-auto">
+                        <a href="https://josreb-cmd.github.io/SimuladorLeasing/" 
+                           target="_blank" 
+                           class="btn btn-primary w-100">Aceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ⭐ 4. Calculadora de Juros Compostos (com favicon como ícone) -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold d-flex align-items-center">
+                        <img src="favicon.svg" alt="Ícone Soluções Eficazes" width="28" class="me-2">
+                        Calculadora de Juros Compostos
+                    </h5>
+                    <p class="card-text text-muted">
+                        Simulação avançada com capitalização composta, resumo premium e exportação PDF.
+                    </p>
+                    <div class="mt-auto">
+                        <a href="https://josreb-cmd.github.io/SimuladorJuroComposto/" 
+                           target="_blank" 
+                           class="btn btn-primary w-100">
+                            Aceder
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ⭐ 5. Calculadora de Juros Simples (nome atualizado) -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Calculadora de Juros Simples</h5>
+                    <p class="card-text text-muted">Calcule juros simples, montante final e rendimento total.</p>
+                    <div class="mt-auto">
+                        <a href="https://josreb-cmd.github.io/SimuladorJurosSimples/" 
+                           target="_blank" 
+                           class="btn btn-primary w-100">Aceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
 
-    <!-- CONTACTOS -->
-    <section class="contactos">
-        <h2>Contactos</h2>
-        <p>Fico ao dispor para qualquer esclarecimento ou colaboração.</p>
-
-        <div class="contact-grid">
-
-            <a href="mailto:info@solucoeseficazes.pt" class="contact-item">
-                📧 Email: info@solucoeseficazes.pt
-            </a>
-
-            <a href="tel:+351961509386" class="contact-item">
-                📞 Telemóvel: 961 509 386
-            </a>
-
-            <a href="https://wa.me/351961509386" target="_blank" class="contact-item">
-                💬 WhatsApp
-            </a>
-
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        © 2026 — Portfólio de Aplicações Web Financeiras
-    </footer>
+<footer>
+    © 2026 José Rebelo — Soluções Eficazes
+</footer>
 
 </body>
 </html>
