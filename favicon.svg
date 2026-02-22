@@ -6,6 +6,15 @@
             <stop offset="100%" stop-color="#66A3FF"/>
         </linearGradient>
     </defs>
-    <path d="M70 70 Q128 20 186 70 Q128 128 70 186 Q128 236 186 186" 
-          stroke="url(#gradF)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <!-- S estilizado com curvas suaves -->
+    <path d="M70 70 
+             Q128 20 186 70 
+             Q128 128 70 186 
+             Q128 236 186 186"
+          stroke="url(#gradF)" 
+          stroke-width="22" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
 </svg>
