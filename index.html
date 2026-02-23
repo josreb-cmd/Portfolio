@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio de Ferramentas Financeiras – Soluções Eficazes</title>
 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
     <style>
+        /* ===========================
+           VARIÁVEIS DE COR E TEMA
+           =========================== */
+        :root {
+            --azul-escuro: #1a2a6c;
+            --azul-claro: #3a7bd5;
+            --cinza-fundo: #f2f4f7;
+            --cinza-texto: #555;
+            --sombra-suave: 0 4px 14px rgba(0,0,0,0.06);
+            --sombra-hover: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        /* ===========================
+           BASE
+           =========================== */
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f2f4f7;
+            background: var(--cinza-fundo);
             margin: 0;
             padding: 0;
             color: #333;
@@ -22,7 +35,7 @@
             margin-top: 40px;
             font-size: 32px;
             font-weight: 700;
-            color: #1a2a6c;
+            color: var(--azul-escuro);
         }
 
         .container {
@@ -32,7 +45,9 @@
             padding-bottom: 40px;
         }
 
-        /* GRID — 4 colunas desktop, 2 tablet, 1 mobile */
+        /* ===========================
+           GRID DOS CARDS
+           =========================== */
         .grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -52,10 +67,12 @@
             }
         }
 
-        /* CARD */
+        /* ===========================
+           CARD
+           =========================== */
         .card {
             background: #ffffff;
-            border: 2px solid #1a2a6c;
+            border: 2px solid var(--azul-escuro);
             border-radius: 14px;
             padding: 26px;
             text-align: center;
@@ -63,23 +80,22 @@
             flex-direction: column;
             justify-content: space-between;
             min-height: 340px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+            box-shadow: var(--sombra-suave);
         }
 
         .card h2 {
             font-size: 20px;
             margin-top: 16px;
-            color: #1a2a6c;
+            color: var(--azul-escuro);
         }
 
         .card p {
             font-size: 15px;
-            color: #555;
+            color: var(--cinza-texto);
             margin-top: 10px;
             flex-grow: 1;
         }
 
-        /* Ícones grandes */
         .icon-large {
             width: 64px;
             height: 64px;
@@ -87,7 +103,9 @@
             display: block;
         }
 
-        /* Botão premium */
+        /* ===========================
+           BOTÃO PREMIUM
+           =========================== */
         .btn-aceder {
             display: inline-block;
             margin-top: 18px;
@@ -95,19 +113,21 @@
             font-size: 15px;
             font-weight: 600;
             color: white;
-            background: linear-gradient(135deg, #1a2a6c, #3a7bd5);
+            background: linear-gradient(135deg, var(--azul-escuro), var(--azul-claro));
             border-radius: 8px;
             text-decoration: none;
             transition: 0.25s ease;
         }
 
         .btn-aceder:hover {
-            background: linear-gradient(135deg, #3a7bd5, #1a2a6c);
+            background: linear-gradient(135deg, var(--azul-claro), var(--azul-escuro));
             transform: translateY(-3px);
             box-shadow: 0 6px 16px rgba(0,0,0,0.15);
         }
 
-        /* Fade-in suave */
+        /* ===========================
+           ANIMAÇÕES
+           =========================== */
         .fade-in {
             opacity: 0;
             animation: fadeIn 1.2s ease forwards;
@@ -118,7 +138,9 @@
             to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* Linha horizontal suave */
+        /* ===========================
+           LINHA SUAVE
+           =========================== */
         .hr-suave {
             width: 100%;
             max-width: 900px;
@@ -127,20 +149,14 @@
             border-top: 1px solid rgba(26, 42, 108, 0.25);
         }
 
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #777;
-            font-size: 14px;
-        }
-
-        /* Botão Voltar ao Topo */
+        /* ===========================
+           BOTÃO VOLTAR AO TOPO
+           =========================== */
         #btnTopo {
             position: fixed;
             bottom: 26px;
             right: 26px;
-            background: linear-gradient(135deg, #1a2a6c, #3a7bd5);
+            background: linear-gradient(135deg, var(--azul-escuro), var(--azul-claro));
             color: white;
             border: none;
             border-radius: 50%;
@@ -161,25 +177,33 @@
             box-shadow: 0 6px 18px rgba(0,0,0,0.25);
         }
 
-        /* GRID das caixas de contato (uma por linha, centradas) */
-        .contact-boxes {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 22px;
-            margin-top: 26px;
+        /* ===========================
+           CONTATOS — HORIZONTAL, PEQUENAS, BORDA FINA
+           =========================== */
+        .contactos {
+            text-align: center;
+            margin: 60px auto 0 auto;
+            max-width: 900px;
         }
 
-        /* Caixa individual */
+        .contact-boxes {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 18px;
+            margin-top: 26px;
+            flex-wrap: wrap;
+        }
+
         .contact-box {
-            border: 2px solid #1a2a6c;
-            border-radius: 12px;
-            padding: 16px 20px;
+            border: 1px solid var(--azul-claro);
+            border-radius: 10px;
+            padding: 12px 16px;
             width: 100%;
-            max-width: 360px;
+            max-width: 240px;
             text-align: center;
             background: #ffffff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            box-shadow: var(--sombra-suave);
             transition: 0.25s ease;
             opacity: 0;
             animation: fadeIn 1.2s ease forwards;
@@ -191,13 +215,20 @@
 
         .contact-box:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            box-shadow: var(--sombra-hover);
         }
 
         .contact-box a {
-            color: #1a2a6c;
+            color: var(--azul-escuro);
             text-decoration: none;
             font-weight: 600;
+        }
+
+        @media (max-width: 700px) {
+            .contact-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -209,7 +240,7 @@
 <div class="container">
     <div class="grid">
 
-        <!-- CARD 1 — Crédito -->
+        <!-- CARD 1 -->
         <div class="card">
             <svg class="icon-large" viewBox="0 0 64 64">
                 <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -222,7 +253,7 @@
             <a class="btn-aceder" href="https://josreb-cmd.github.io/SimuladorCredito/" target="_blank">Aceder</a>
         </div>
 
-        <!-- CARD 2 — Financiamento Máximo -->
+        <!-- CARD 2 -->
         <div class="card">
             <svg class="icon-large" viewBox="0 0 64 64">
                 <defs><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -235,7 +266,7 @@
             <a class="btn-aceder" href="https://josreb-cmd.github.io/SimuladorFinanciamento/" target="_blank">Aceder</a>
         </div>
 
-        <!-- CARD 3 — Leasing -->
+        <!-- CARD 3 -->
         <div class="card">
             <svg class="icon-large" viewBox="0 0 64 64">
                 <defs><linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -248,7 +279,7 @@
             <a class="btn-aceder" href="https://josreb-cmd.github.io/Simulador-Leasing/" target="_blank">Aceder</a>
         </div>
 
-        <!-- CARD 4 — Juros Compostos -->
+        <!-- CARD 4 -->
         <div class="card">
             <svg class="icon-large" viewBox="0 0 64 64">
                 <defs><linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -264,7 +295,7 @@
             <a class="btn-aceder" href="https://josreb-cmd.github.io/SimuladorJuroComposto/" target="_blank">Aceder</a>
         </div>
 
-        <!-- CARD 5 — Juros Simples -->
+        <!-- CARD 5 -->
         <div class="card">
             <svg class="icon-large" viewBox="0 0 64 64">
                 <defs><linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -277,31 +308,29 @@
             <a class="btn-aceder" href="https://josreb-cmd.github.io/SimuladorJuroSimples/" target="_blank">Aceder</a>
         </div>
 
-    </div> <!-- fecha grid -->
+    </div>
 
-    <!-- CONTATOS (sem caixa geral, 3 caixas individuais) -->
-    <div class="contactos fade-in" style="text-align:center; margin:60px auto 0 auto; max-width:700px;">
+    <!-- CONTATOS -->
+    <div class="contactos fade-in">
 
-        <h2 style="color:#1a2a6c; margin-bottom:16px;">Contatos</h2>
+        <h2>Contatos</h2>
 
-        <p style="font-size:16px; margin-bottom:26px;">
-            Fico ao dispor para qualquer esclarecimento ou colaboração.
-        </p>
+        <p>Fico ao dispor para qualquer esclarecimento ou colaboração.</p>
 
         <div class="contact-boxes">
 
             <div class="contact-box">
-                📧 <strong>Email</strong><br>
+                📧 <strong>Email:</strong><br>
                 <a href="mailto:info@solucoeseficazes.pt">info@solucoeseficazes.pt</a>
             </div>
 
             <div class="contact-box">
-                📞 <strong>Telemóvel</strong><br>
+                📞 <strong>Telemóvel:</strong><br>
                 <a href="tel:+351961509386">961 509 386</a>
             </div>
 
             <div class="contact-box">
-                💬 <strong>WhatsApp</strong><br>
+                💬 <strong>WhatsApp:</strong><br>
                 <a href="https://wa.me/351961509386" target="_blank">961 509 386</a>
             </div>
 
@@ -310,7 +339,7 @@
 
     <hr class="hr-suave">
 
-</div> <!-- fecha container -->
+</div>
 
 <footer>
     © 2026 José Rebelo — Soluções Eficazes
@@ -322,18 +351,11 @@
     const btnTopo = document.getElementById("btnTopo");
 
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            btnTopo.style.display = "flex";
-        } else {
-            btnTopo.style.display = "none";
-        }
+        btnTopo.style.display = window.scrollY > 300 ? "flex" : "none";
     });
 
     btnTopo.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 </script>
 
