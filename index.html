@@ -160,6 +160,51 @@
             transform: translateY(-4px);
             box-shadow: 0 6px 18px rgba(0,0,0,0.25);
         }
+
+        /* GRID das caixas de contacto */
+        .contact-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            justify-items: center;
+            margin-top: 26px;
+        }
+
+        @media (max-width: 700px) {
+            .contact-boxes {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Caixa individual */
+        .contact-box {
+            border: 2px solid #1a2a6c;
+            border-radius: 12px;
+            padding: 16px 20px;
+            width: 100%;
+            max-width: 260px;
+            text-align: center;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transition: 0.25s ease;
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        .contact-box:nth-child(1) { animation-delay: 0.1s; }
+        .contact-box:nth-child(2) { animation-delay: 0.25s; }
+        .contact-box:nth-child(3) { animation-delay: 0.4s; }
+
+        .contact-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        .contact-box a {
+            color: #1a2a6c;
+            text-decoration: none;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -246,7 +291,7 @@
                 border-radius: 14px; 
                 padding: 30px 26px; 
                 text-align: center; 
-                max-width: 600px; 
+                max-width: 700px; 
                 margin: 60px auto 0 auto;
                 box-shadow: 0 4px 14px rgba(0,0,0,0.06);">
 
@@ -256,26 +301,24 @@
             Fico ao dispor para qualquer esclarecimento ou colaboração.
         </p>
 
-        <p style="font-size:16px; margin:10px 0;">
-            📧 <strong>Email:</strong> 
-            <a href="mailto:info@solucoeseficazes.pt" style="color:#1a2a6c; text-decoration:none;">
-                info@solucoeseficazes.pt
-            </a>
-        </p>
+        <div class="contact-boxes">
 
-        <p style="font-size:16px; margin:10px 0;">
-            📞 <strong>Telemóvel:</strong> 
-            <a href="tel:+351961509386" style="color:#1a2a6c; text-decoration:none;">
-                961 509 386
-            </a>
-        </p>
+            <div class="contact-box">
+                📧 <strong>Email:</strong><br>
+                <a href="mailto:info@solucoeseficazes.pt">info@solucoeseficazes.pt</a>
+            </div>
 
-        <p style="font-size:16px; margin:10px 0;">
-            💬 <strong>WhatsApp:</strong> 
-            <a href="https://wa.me/351961509386" target="_blank" style="color:#1a2a6c; text-decoration:none;">
-                961 509 386
-            </a>
-        </p>
+            <div class="contact-box">
+                📞 <strong>Telemóvel:</strong><br>
+                <a href="tel:+351961509386">961 509 386</a>
+            </div>
+
+            <div class="contact-box">
+                💬 <strong>WhatsApp:</strong><br>
+                <a href="https://wa.me/351961509386" target="_blank">961 509 386</a>
+            </div>
+
+        </div>
     </div>
 
     <hr class="hr-suave">
