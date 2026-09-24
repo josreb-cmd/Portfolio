@@ -232,6 +232,78 @@
         }
 
         /* ===========================
+           NOVOS SIMULADORES — CARD DUPLO
+           =========================== */
+        .card-duo {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .mini-card {
+            position: relative;
+            background: #f0f7ff;
+            border: 2px solid #7cb2f0;
+            border-radius: 14px;
+            padding: 18px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            box-shadow: var(--sombra-suave);
+        }
+
+        .mini-card .badge-novo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #6fbf73;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            padding: 3px 8px;
+            border-radius: 999px;
+        }
+
+        .mini-card .icon-mini {
+            width: 34px;
+            height: 34px;
+            margin: 0 auto 8px auto;
+            display: block;
+        }
+
+        .mini-card h3 {
+            font-size: 15px;
+            margin: 4px 0 6px;
+            color: var(--azul-escuro);
+        }
+
+        .mini-card p {
+            font-size: 12px;
+            color: #3b6ea8;
+            margin: 0 0 10px;
+        }
+
+        .mini-card .btn-aceder-mini {
+            display: inline-block;
+            padding: 8px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff;
+            background: #2f7de0;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.25s ease;
+        }
+
+        .mini-card .btn-aceder-mini:hover {
+            background: #1c63c2;
+            transform: translateY(-2px);
+        }
+
+        /* ===========================
            FOOTER — CENTRADO E BOLD
            =========================== */
         footer {
@@ -367,6 +439,32 @@
     <a class="btn-aceder" href="https://josreb-cmd.github.io/SimuladorInvestimento/" target="_blank">
         Aceder
     </a>
+</div>
+
+<!-- CARD 8 – Novos Simuladores (par) -->
+<div class="card-duo">
+
+    <div class="mini-card">
+        <span class="badge-novo">NOVO</span>
+        <svg class="icon-mini" viewBox="0 0 64 64">
+            <path fill="#2f7de0" d="M8 26L32 8l24 18v4H8v-4zM12 30v26h10V38h20v18h10V30H12z"/>
+        </svg>
+        <h3>Simulador de Crédito</h3>
+        <p>simulador-credito.solucoeseficazes.pt</p>
+        <a class="btn-aceder-mini" href="https://simulador-credito.solucoeseficazes.pt/" target="_blank">Aceder</a>
+    </div>
+
+    <div class="mini-card">
+        <span class="badge-novo">NOVO</span>
+        <svg class="icon-mini" viewBox="0 0 64 64">
+            <rect x="20" y="6" width="24" height="52" rx="4" fill="#2f7de0"/>
+            <rect x="28" y="50" width="8" height="4" fill="#fff"/>
+        </svg>
+        <h3>Simulador Lite</h3>
+        <p>crédito habitação/pessoal com DSTI e teste de stress</p>
+        <a class="btn-aceder-mini" href="https://simulador-lite.solucoeseficazes.pt/" target="_blank">Aceder</a>
+    </div>
+
 </div>
 
     </div>
